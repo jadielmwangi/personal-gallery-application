@@ -12,9 +12,15 @@
   font-size:large;
   /* color: red; */
   padding: 20px;
-  
+}
+
+h1{
+  font-weight: bold;
+  font-size: large;
 
 }
+
+
 
 body{
   background-color: darkgray;
@@ -29,6 +35,7 @@ h3,h2,p
 {
   color: green;
   font-size: large;
+  font-weight: bold;
 }
 
 
@@ -59,7 +66,7 @@ h3,h2,p
   width:80%;
   border-radius: 40px;
   text-align: center;
-  /* color:black; */
+  
   font-family: 'Noto Sans KR', sans-serif;
 
 
@@ -77,9 +84,6 @@ h3,h2,p
 input{
   font-size:large;
   font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
 
 }
-
-/* .modal-body{
-  font-family: 'Noto Sans KR', sans-serif;
-} */
