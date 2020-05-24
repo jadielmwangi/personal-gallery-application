@@ -3,6 +3,28 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import datetime as dt
 
+from .models import *
+
+# Create your views here.
+def welcome(request):
+    return render(request, 'welcome.html')
+
+# displaying different photo categories in cards
+def photo_category(request):
+    date = dt.date.today()## current date
+    portfolio = Image.objects.all
+    return render(request, 'all-folios/category.html', {"date": date, "portfolio": portfolio})
+
+def about(request):
+    date = dt.date.today()
+    return render(request, 'all-folios/about.html', {"date": date,})
+
+
+## added this
+def contact(request):
+    date = dt.date.today()
+    return render(request, 'all-folios/contact.html', {"date": date,})
+
 
 
 
