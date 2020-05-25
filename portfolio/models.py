@@ -44,6 +44,7 @@ class Image(models.Model):
     location = models.ForeignKey(Location)
     category = models.ForeignKey(Category)
     posted_date= models.DateTimeField(auto_now_add=True)
+    ## ImageField that takes in the upload_toargument which defines where the image will be stored in the file system
     category_image = models.ImageField(upload_to = 'images/')
 
     def __str__(self):
@@ -60,12 +61,13 @@ class Image(models.Model):
     def update_image(self):
         self.update_image()
 
+##  method that will query the database and fetch our results.
+
     @classmethod
     def search_by_category(cls,search_term):
         portfolio = cls.objects.filter(category__name__icontains=search_term)
         return portfolio
 
-##  method that will query the database and fetch our results.
     @classmethod
     def get_images(cls):
         images = cls.objects.all()
