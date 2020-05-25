@@ -49,8 +49,7 @@ class Image(models.Model):
     def __str__(self):
         return self.title
 
-    # class Meta:
-    #     ordering = ['first_name']
+  
 
     def save_image(self):
         self.save()
@@ -66,12 +65,17 @@ class Image(models.Model):
         portfolio = cls.objects.filter(category__name__icontains=search_term)
         return portfolio
 
+##  method that will query the database and fetch our results.
     @classmethod
     def get_images(cls):
         images = cls.objects.all()
         return images
 
+
     @classmethod
     def get_image_by_id(cls,id):
         img_id = cls.objects.get(pk=id)
         return img_id
+
+  # class Meta:
+    #     ordering = ['first_name']
