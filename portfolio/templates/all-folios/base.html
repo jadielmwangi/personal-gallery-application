@@ -14,7 +14,10 @@
 
     {% block styles%}
         {% bootstrap_css%}
+        <!-- <link rel="stylesheet" href="{% static 'css/main.css' %}"> -->
+
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
     {% endblock %}
 </head>
 <body>
@@ -26,8 +29,8 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h2 class="text-center"> {{date|date:"l d-F Y"}}</h2>
-        <h1 class="text-center">Welcome to Jadiel Mwangi Gallery.</h1>
-        <p class="text-center"> Use the following categories to search for images: <br>Birds,Wild Animals,African culture & dressing,Mountains& forests and Intellectuals</p>
+        <h1 class="text-center">Welcome to Jadiel Mwangi Gallery Application</h1>
+        <p class="text-center"> Use the following categories to search for available images: <br>Birds,Wild Animals,African culture & dressing,Mountains& forests and Intellectuals</p>
         <h3 class="text-center">Click the image and view the details:</h3>
     </div>
 </div>
