@@ -44,7 +44,7 @@ class Image(models.Model):
     location = models.ForeignKey(Location)
     category = models.ForeignKey(Category)
     posted_date= models.DateTimeField(auto_now_add=True)
-    ## ImageField that takes in the upload_toargument which defines where the image will be stored in the file system
+    ## defines where the image will be stored in the file system.
     category_image = models.ImageField(upload_to = 'images/')
 
     def __str__(self):
