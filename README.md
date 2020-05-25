@@ -1,12 +1,12 @@
 # Name of the App
- Jadiel Gallery App
+ Jadiel Mwangi gallery App
 ## Description
 Jadiel Gallery consists of defferent photos for diffferent categories.<br>
 Its designed with love and passion for Kenyan. search the following categories in the search bar:
 Birds, Wild animals, African culture and dressing, Forests & mountains and Intellectuals 
 
 
-# link to deployed site 
+# link to deployed site: 
 
 
 ## User Stories
@@ -23,10 +23,9 @@ As a user I would like to:
 * virtualenv
 
 ### Cloning
-* In your terminal:
+* In your terminal git clone  the repo
         
-    $ git clone https:
-    $ cd Documents/django/gallery
+    
 
 ## Running the Application
 * Creating the virtual environment
