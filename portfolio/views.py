@@ -5,11 +5,10 @@ import datetime as dt
 
 from .models import *
 
-# Create your views here.
-def welcome(request):
-    return render(request, 'welcome.html')
+# Create your views here:
 
-# displaying different photo categories in cards
+
+# displaying different photo categories
 def photo_category(request):
     date = dt.date.today()## current date
     portfolio = Image.objects.all
@@ -33,7 +32,7 @@ def search_results(request):
         search_term = request.GET.get("image")
         searched_images = Image.search_by_category(search_term)
         message = f"{search_term}"
-##render a HTML template and pass in the list of items found and the search_term.
+## render a HTML template and pass in the list of items found and the search_term.
         return render(request, 'all-folios/search.html',{"message":message,"images": searched_images})
 
     else:
