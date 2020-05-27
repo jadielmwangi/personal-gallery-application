@@ -2,8 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import datetime as dt
-
-from .models import *
+from .models import Image
 
 # Create your views here:
 
@@ -19,7 +18,7 @@ def about(request):
     return render(request, 'all-folios/about.html', {"date": date,})
 
 
-## added this
+
 def contact(request):
     date = dt.date.today()
     return render(request, 'all-folios/contact.html', {"date": date,})
@@ -32,6 +31,7 @@ def search_results(request):
         search_term = request.GET.get("image")
         searched_images = Image.search_by_category(search_term)
         message = f"{search_term}"
+        
 ## render a HTML template and pass in the list of items found and the search_term.
         return render(request, 'all-folios/search.html',{"message":message,"images": searched_images})
 
